@@ -1,3 +1,8 @@
+.card-overlay {
+  width: 100%;
+  height: 100%;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +12,11 @@
 
 body {
   background-color: #262626;
+}
+
+img {
+  display: block;
+  width: 100%;
 }
 
 .header {
@@ -59,8 +69,6 @@ body {
 }
 
 .about-us-left img {
-  display: block;
-  width: 100%;
   opacity: 0.7;
 }
 
@@ -99,6 +107,77 @@ body {
 
 .about-us-right .description::first-letter {
   padding-left: 50px;
+}
+
+.gallery .cards-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.footer {
+  padding: 4.375rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 4.375rem;
+}
+
+.footer .social-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 300px;
+  margin-bottom: 70px;
+}
+
+.footer .social-media-item {
+  list-style: none;
+}
+
+.footer .social-media-link {
+  text-decoration: none;
+  font-size: 3.125rem;
+  color: #bbb;
+  -webkit-transition: color 0.7s;
+  transition: color 0.7s;
+}
+
+.footer .social-media-link:hover {
+  color: #d3ab55;
+}
+
+.footer-copyright-paragraph {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.125rem;
+  color: #bbb;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: capitalize;
 }
 
 .logo {
@@ -175,5 +254,80 @@ body {
 .main-btn:hover {
   background-color: #d3ab55;
   color: #262626;
+}
+
+.card {
+  position: relative;
+  width: 33.3333%;
+  height: 30vw;
+}
+
+.card:hover .card-overlay {
+  opacity: 1;
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  background-color: rgba(211, 171, 85, 0.6);
+  color: #fff;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: opacity 0.3s ease-in;
+  transition: opacity 0.3s ease-in;
+}
+
+.card-overlay-heading {
+  font-family: "Nunito", sans-serif;
+  font-size: 3.125rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+
+.card-overlay-paragraph {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.875rem;
+  margin-bottom: 1.875rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+
+.card-overlay-btn {
+  width: 9.375rem;
+  height: 2.5rem;
+  color: #d3ab55;
+  background-color: #fff;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 0.875rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 1px solid #d3ab55;
+  border-radius: 1.875rem;
+  outline: none;
+  cursor: pointer;
+}
+
+.card-img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.5;
 }
 /*# sourceMappingURL=main.css.map */

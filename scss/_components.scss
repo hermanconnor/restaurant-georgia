@@ -60,3 +60,62 @@
     color: $color-dark;
   }
 }
+
+.card {
+  position: relative;
+  width: 33.3333%;
+  height: 30vw;
+
+  &:hover .card-overlay {
+    opacity: 1;
+  }
+
+  &-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background-color: rgba($color-primary, 0.6);
+    color: $color-white;
+    z-index: 10;
+    @include flexLayout;
+    flex-direction: column;
+    @extend %fullSpace;
+    transition: opacity 0.3s ease-in;
+
+    &-heading {
+      font-family: $font-nunito;
+      font-size: 3.125rem;
+      @include textStyles(capitalize);
+    }
+
+    &-paragraph {
+      font-family: $font-josefinSans;
+      font-size: 1.875rem;
+      margin-bottom: 1.875rem;
+      @include textStyles(capitalize);
+    }
+
+    &-btn {
+      width: 9.375rem;
+      height: 2.5rem;
+      color: $color-primary;
+      background-color: $color-white;
+      font-family: $font-josefinSans;
+      font-size: 0.875rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border: 1px solid $color-primary;
+      border-radius: 1.875rem;
+      outline: none;
+      cursor: pointer;
+    }
+  }
+
+  &-img {
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+  }
+}
